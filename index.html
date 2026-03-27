@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<iframe 
-  src="https://withered-mud-4e52.koora-live.workers.dev/?url=https://stream-lb.livemediama.com/arryadia/hls/master.m3u8" 
-  style="width: 100%; height: 100%; border: none; position: absolute; top: 0; left: 0;" 
-  allowfullscreen="true">
-</iframe>
-<script src="ad-manager.js"></script>
+    <title>البث المباشر لقناة الرياضية</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <style>
+        .video-container {
+            max-width: 800px;
+            margin: 20px auto;
+            direction: rtl;
+        }
+        .video-js {
+            width: 100% !important;
+            height: 450px !important;
+        }
+    </style>
+</head>
+<body>
 
+<div class="video-container">
+    <h2>بث مباشر: قناة الرياضية المغربية</h2>
+    
+    <video id="my-video" class="video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" poster="https://arryadia.snrt.ma/images/logo_arryadia.png">
+        <source src="https://stream-lb.livemediama.com/arryadia/hls/master.m3u8" type="application/x-mpegURL">
+        <p class="vjs-no-js">
+            للمشاهدة، يرجى تفعيل جافا سكريبت وتحديث المتصفح.
+        </p>
+    </video>
+</div>
 
-</body>   
+<script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+
+<script>
+    var player = videojs('my-video');
+    player.play(); // محاولة التشغيل التلقائي (قد تمنعها بعض المتصفحات)
+</script>
+
+</body>
 </html>
